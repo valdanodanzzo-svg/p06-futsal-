@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>P06 - Form Pendaftaran Futsal UKIP</title>
+<style>
+body{font-family:Arial,sans-serif; max-width:700px; margin:20px auto; padding:15px; background:#f4f7fb; color:#1a2b4c;}
+.card{background:#e6efff; padding:20px; border-radius:12px; margin-bottom:20px;}
+h1{color:#1a2b4c; margin:0 0 10px 0;}
+label{display:block; font-weight:bold; margin:15px 0 5px 0;}
+input[type="text"], input[type="email"], select, textarea{width:100%; max-width:400px; padding:10px; border:1px solid #999; border-radius:6px; font-size:14px; box-sizing:border-box;}
+fieldset{border:1px solid #999; border-radius:8px; padding:10px 15px; max-width:400px; margin-top:10px;}
+legend{font-weight:bold;}
+textarea{min-height:80px;}
+.check{margin-top:15px; display:flex; gap:8px; align-items:start;}
+button{margin-top:15px; padding:10px 18px; border:1px solid #666; border-radius:6px; cursor:pointer; background:#fff; font-weight:bold;}
+button.primary{background:#1a2b4c; color:#fff; border-color:#1a2b4c;}
+.note{font-size:13px; color:#444; margin-top:15px; font-style:italic;}
+</style>
+</head>
+<body>
+
+<div class="card">
+<h1>Formulir Pendaftaran Komunitas Futsal UKIP</h1>
+<p>Isi form minat bergabung. Contoh form tampilan saja, tanpa penyimpanan. Data fiktif untuk tugas P06.</p>
+</div>
+
+<form onsubmit="return false;">
+<label for="nama">Nama lengkap</label>
+<input type="text" id="nama" name="nama" placeholder="Tuliskan nama lengkap" required>
+
+<label for="email">Email aktif</label>
+<input type="email" id="email" name="email" placeholder="nama@example.com" required>
+
+<label for="jurusan">Jurusan / Prodi</label>
+<input type="text" id="jurusan" name="jurusan" placeholder="Contoh: Teknik Informatika" required>
+
+<label for="kegiatan">Kegiatan Futsal Pilihan</label>
+<select id="kegiatan" name="kegiatan" required>
+<option value="">-- Pilih Kegiatan --</option>
+<option value="latihan">Latihan Rutin Teknik & Fisik</option>
+<option value="sparing">Sparing Persahabatan Antar Jurusan</option>
+<option value="turnamen">Turnamen Internal Futsal Cup</option>
+<option value="kepengurusan">Kepengurusan & Panitia</option>
+</select>
+
+<fieldset>
+<legend>Waktu latihan yang tersedia</legend>
+<input type="radio" id="pagi" name="waktu" value="pagi" required>
+<label for="pagi" style="display:inline; font-weight:normal; margin-right:15px;">Pagi (07.00-09.00)</label>
+<input type="radio" id="sore" name="waktu" value="sore">
+<label for="sore" style="display:inline; font-weight:normal;">Sore (16.00-18.00)</label>
+</fieldset>
+
+<label for="posisi">Posisi favorit</label>
+<select id="posisi" name="posisi">
+<option value="">-- Pilih Posisi --</option>
+<option value="kiper">Kiper</option>
+<option value="anchor">Anchor / Belakang</option>
+<option value="flank">Flank / Sayap</option>
+<option value="pivot">Pivot / Depan</option>
+</select>
+
+<label for="alasan">Alasan ingin bergabung Futsal UKIP</label>
+<textarea id="alasan" name="alasan" placeholder="Ceritakan motivasi kamu ikut komunitas futsal..." required></textarea>
+
+<div class="check">
+<input type="checkbox" id="setuju" required>
+<label for="setuju" style="margin:0; font-weight:normal; display:inline;">Saya memahami bahwa ini hanya simulasi form P06, data tidak dikirim ke server, dan saya bersedia hadir trial 1x di Lapangan UKIP.</label>
+</div>
+
+<button type="submit" class="primary">Simulasikan Daftar</button>
+<button type="reset">Reset</button>
+</form>
+
+<p class="note">Tombol submit sengaja tidak memproses data. Fokus P06 adalah struktur HTML form: label-for/id, input types, select, radio, checkbox, textarea, validasi required. Konten Komunitas Futsal UKIP fiktif.</p>
+<p style="margin-top:20px; font-weight:bold;">Link P05: <a href="https://valdanodanzzo-svg.github.io/p05-futsal-/">P05 Futsal UKIP</a></p>
+</body>
+  </html>
